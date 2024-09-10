@@ -1,0 +1,14 @@
+{
+  "name": "gas-cdn",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean": "rimraf .turbo",
+    "deploy:staging": "CLOUDFLARE_ACCOUNT_ID=<YOUR_CF_ACC_ID> wrangler pages deploy ./public --project-name=<CF_PAGES_PROJECT_NAME> --branch=main",
+    "deploy:production": "CLOUDFLARE_ACCOUNT_ID=<YOUR_CF_ACC_ID> wrangler pages deploy ./public --project-name=<CF_PAGES_PROJECT_NAME> --branch=main"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "wrangler": "^3.10.1"
+  }
+}
